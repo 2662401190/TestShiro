@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="perission:war">
+    <output-path>$PROJECT_DIR$/perission/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>perission</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="perission.war">
+      <element id="artifact" artifact-name="perission:war exploded" />
+    </root>
+  </artifact>
+</component>
