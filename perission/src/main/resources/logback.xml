@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration scan="true" scanPeriod="60 seconds">
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+<!--            日期输出格式配置-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+<!--    <appender name="permission" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+<!--        tomcat-->
+<!--        <file>${cataling.home}/logs/permission.log</file>-->
+<!-- 文件压缩规则  根据时间-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--            <fileNamePattern> <file>${cataling.home}/logs/permission.%d{yyyy-MM-dd}.log.gz</file></fileNamePattern>-->
+<!--        </rollingPolicy>-->
+<!--        <layout class="ch.qos.logback.classic.PatternLayout">-->
+<!--            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg</pattern>-->
+<!--        </layout>-->
+<!--    </appender>-->
+<!--    -->
+<!--    -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>

@@ -11,7 +11,6 @@
     <context:annotation-config/>
 <!--    启动注解驱动的spring MVC  功能-->
     <mvc:annotation-driven/>
-
 <!--    启动包扫描功能 扫描 controller 和 service-->
     <context:component-scan base-package="com.mall.controller"/>
     <context:component-scan base-package="com.mall.service"/>
@@ -19,15 +18,19 @@
 <!--    两个核心类-->
 
 <!--    请求解析器-->
-    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
-<!--   返回处理-->
+<!--    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>-->
+<!--   回处理-->
     <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
-
 <!--    JSON 处理-->
     <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"/>
+
+
+    <bean  class="com.mall.common.SpringExceptionResolver"/>
 <!--  视图解析器  -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/views"/>
         <property name="suffix" value=".jsp"/>
     </bean>
+
+
 </beans>
