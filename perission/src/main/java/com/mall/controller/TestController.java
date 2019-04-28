@@ -22,8 +22,6 @@ public class TestController {
         log.info("hello");
         return  JsonData.success("hrllo");
     }
-
-
     @GetMapping("/validate.json")
     public JsonData validate(TestVo testVo) {
         log.info("validate");
